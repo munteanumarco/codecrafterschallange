@@ -1,0 +1,18 @@
+<div class="container">
+    <h4>Validate OTP for a user</h4>
+    <div class="mb-3">
+      <label for="userIdInput" class="form-label">Insert the UserID:</label>
+      <input type="text" class="form-control" id="userIdInput" [(ngModel)]="userId">
+    </div>
+    <div class="mb-3">
+        <label for="otpInput" class="form-label">Insert the OTP:</label>
+        <input type="text" class="form-control" id="otpInput" [(ngModel)]="otp">
+      </div>
+    <button type="button" class="btn btn-primary" (click)="onValidate()">Validate</button>
+    <div *ngIf="(status$ | async) === true" class="alert alert-success" role="alert">
+        OTP is Valid!
+    </div> 
+    <div *ngIf="(status$ | async) === false" class="alert alert-danger" role="alert">
+        OTP is Invalid!
+    </div>
+</div>

@@ -1,0 +1,55 @@
+# Angular app
+
+# Dependency directories
+/node_modules
+/dist
+
+# Compiled output
+/dist
+/dist-server
+/dist-test
+
+# Log files
+logs
+*.log
+
+# Environment variables
+.env
+.env.*
+
+# IDE and editor files
+/.idea
+/.vscode
+*.swp
+*.swo
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
+
+# ASP.NET Web API
+
+# Build output
+bin/
+obj/
+
+# Visual Studio files
+.vs/
+.vscode/
+
+# Package files
+*.nupkg
+*.pfx
+*.snk
+
+# User-specific files
+*.suo
+*.user
+*.userprefs
+*.sln.docstates
+*.suo
+*.cache
+
+# ReSharper files
+_ReSharper*/
+*.resharper.user

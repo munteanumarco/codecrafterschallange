@@ -1,0 +1,10 @@
+<div class="container">
+    <div>
+        <h4>Start generating OTPs for a user</h4>
+        <div class="mb-3">
+            <label for="userIdInput" class="form-label">Insert the UserID:</label>
+            <input type="text" class="form-control" id="userIdInput" [(ngModel)]="userId">
+        </div>
+        <button type="button" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+    </div>
+</div>
