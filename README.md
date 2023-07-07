@@ -13,22 +13,22 @@ I made a more indepth research about it and basically it's an algorithm that com
 
 Also here are two paths: a stateless aproach or a stateful one. Of course each one has its advantages and disadvantages and I read a little more about each one before making a decision for my implementaion. I leave bellow some information about this.
 
-Stateless TOTP: 
-    Advantages:
-        + scalability:  no information is stored, no excessive I/O on the DB
-        + simplicity: no need to keep track of any state or manage a DB of past OTPs.
-        + performance: validation also  can be done quickly, doesn't require any DB operations
-    Disadvantages:
-        - replay attacks: potentially vulnerable to replay attacks within the same time window as   the server has no memory of previously validated OTPs.
-        - time sync: if there's a significant time difference between the server and client, it could cause valid OTPs to be rejected or expired OTPs to be accepted. This can be mitigated by allowing a certain amount of time skew, but it's still a potential issue.
+Stateless TOTP: <br>
+    Advantages:<br>
+        + scalability:  no information is stored, no excessive I/O on the DB<br>
+        + simplicity: no need to keep track of any state or manage a DB of past OTPs.<br>
+        + performance: validation also  can be done quickly, doesn't require any DB operations<br>
+    Disadvantages:<br>
+        - replay attacks: potentially vulnerable to replay attacks within the same time window as   the server has no memory of previously validated OTPs.<br>
+        - time sync: if there's a significant time difference between the server and client, it could cause valid OTPs to be rejected or expired OTPs to be accepted. This can be mitigated by allowing a certain amount of time skew, but it's still a potential issue.<br>
 
-Stateful TOTP:
-    Advantages:
-        + replay protection: can prevent replay attacks because the server keeps track of      previously used OTPs and can reject any that are used again.
-        + more control: it provides more control over OTP usage, for example, by allowing you to enforce stricter rules about OTP reuse or expiry.
-    Disadvantages:
-        - complexity: complex to implement and maintain, as you need to reliably store and manage state for each OTP.
-        - scalability & performance: can require significant storage and database resources, especially for a large number of users.
+Stateful TOTP:<br>
+    Advantages:<br>
+        + replay protection: can prevent replay attacks because the server keeps track of      previously used OTPs and can reject any that are used again.<br>
+        + more control: it provides more control over OTP usage, for example, by allowing you to enforce stricter rules about OTP reuse or expiry.<br>
+    Disadvantages:<br>
+        - complexity: complex to implement and maintain, as you need to reliably store and manage state for each OTP.<br>
+        - scalability & performance: can require significant storage and database resources, especially for a large number of users.<br>
 
 After getting a little familiar with these concepts I thought that the approach I would take for this project will be the stateless one, as for this small project the reduced complexity and simplicity are key factors.
 
