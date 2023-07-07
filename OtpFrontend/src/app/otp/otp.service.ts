@@ -7,7 +7,7 @@ import { Observable, catchError, of } from 'rxjs';
 })
 export class OtpService {
 
-  baseUrl: string = "/api/otp";
+  baseUrl: string = "https://webapp-230707184837.azurewebsites.net/api/otp";
 
   constructor(private readonly http: HttpClient) { }
 
