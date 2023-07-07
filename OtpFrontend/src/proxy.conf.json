@@ -1,6 +1,6 @@
 {
     "/api/*": {
-        "target": "https://localhost:7280",
+        "target": "https://webapp-230707184837.azurewebsites.net",
         "secure": false,
         "changeOrigin": true
     }
