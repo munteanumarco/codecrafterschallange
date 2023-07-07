@@ -4,6 +4,10 @@
 
 I deployed the frontend on Netlify and the API on Azure so you can easily access it. I'll leave the link to the app bellow so you can play with it :)
 
+This is the angular web app: https://codecrafterschallange.netlify.app
+Link to the exposed endpoints (swagger): https://webapp-230707184837.azurewebsites.net/swagger/index.html
+
+It may take some time to load as I used free tiers across the deployments.
 
 ## Background Information
 I want to give you some background about my thought process and choices.
