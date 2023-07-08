@@ -18,8 +18,8 @@ logs
 .env.*
 
 # IDE and editor files
-/.idea
-/.vscode
+.idea/
+.vscode/
 *.swp
 *.swo
 
