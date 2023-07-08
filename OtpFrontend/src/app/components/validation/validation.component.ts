@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { OtpService } from '../services/otp.service';
+import { OtpService } from 'src/app/services/otp.service';
 import { Observable } from 'rxjs';
 
 @Component({

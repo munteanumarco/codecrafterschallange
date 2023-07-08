@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { OtpService } from '../services/otp.service';
+import { OtpService } from 'src/app/services/otp.service';
 import { Observable, interval, startWith, switchMap, tap, timer } from 'rxjs';
 import { OTP } from './models/otp';
 

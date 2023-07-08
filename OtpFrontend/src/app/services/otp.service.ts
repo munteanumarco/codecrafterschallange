@@ -1,7 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, map, of } from 'rxjs';
-import { OTP } from '../otp/models/otp';
+import { OTP } from '../components/otp/models/otp';
 
 @Injectable({
   providedIn: 'root'
