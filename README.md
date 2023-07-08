@@ -1,7 +1,7 @@
 # OTP Generator
 
 ## Quick Demo
-[![Video Thumbnail](path/to/thumbnail.png)](Screen%20Recording%202023-07-08%20at%2016.13.37.mov)
+[![Quick Demo](https://img.youtube.com/vi/BfJjJYZ_BSU/0.jpg)](https://www.youtube.com/watch?v=BfJjJYZ_BSU)
 
 ## Link to the app
 
