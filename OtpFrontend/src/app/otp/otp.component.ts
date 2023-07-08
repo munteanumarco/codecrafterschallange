@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OtpService } from './otp.service';
 import { Observable, interval, startWith, switchMap, tap, timer } from 'rxjs';
+import { OTP } from './models/otp';
 
 @Component({
   selector: 'app-otp',
@@ -8,7 +9,7 @@ import { Observable, interval, startWith, switchMap, tap, timer } from 'rxjs';
   styleUrls: ['./otp.component.css']
 })
 export class OtpComponent implements OnInit {
-  otp$!: Observable<string>;
+  otp$!: Observable<OTP>;
   timer$!: Observable<any>;
   secondsLeft!: number;
   userId!: string;

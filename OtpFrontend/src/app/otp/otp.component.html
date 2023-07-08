@@ -1,7 +1,7 @@
 <div class="container">
     <div *ngIf="otp$ | async as otp">
         <h1>Current OTP for user with id {{ userId }}</h1>
-        <h4>{{otp}}</h4>
+        <h4>{{otp.code}}</h4>
         <p>Seconds left: {{ secondsLeft }}</p>
     </div>
 </div>

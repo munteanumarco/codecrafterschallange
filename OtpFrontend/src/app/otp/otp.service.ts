@@ -1,6 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, map, of } from 'rxjs';
+import { OTP } from './models/otp';
 
 @Injectable({
   providedIn: 'root'
@@ -15,13 +16,11 @@ export class OtpService {
     return this.http.get(`${this.baseUrl}/up`);
   }
   
-  getOtp(userId: string): Observable<string> {
+  getOtp(userId: string): Observable<OTP> {
     let params = new HttpParams()
       .set('userId', userId);
 
-    return this.http.get<string>(this.baseUrl, { params}).pipe(
-      map(response => response as string)
-    );;
+    return this.http.get<OTP>(this.baseUrl, { params});
   }
 
   verifyOtp(userId: string, otp: string): Observable<boolean> {
