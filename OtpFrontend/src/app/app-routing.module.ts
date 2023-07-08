@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { OtpComponent } from './otp/otp.component';
-import { ValidationComponent } from './validation/validation.component';
+import { OtpComponent } from './components/otp/otp.component';
+import { ValidationComponent } from './components/validation/validation.component';
 import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
