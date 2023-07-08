@@ -1,5 +1,8 @@
 # OTP Generator
 
+## Quick Demo
+[![Video Thumbnail](path/to/thumbnail.png)](Screen%20Recording%202023-07-08%20at%2016.13.37.mov)
+
 ## Link to the app
 
 I deployed the frontend on Netlify and the API on Azure so you can easily access it. I'll leave the link to the app bellow so you can play with it :)<br>
