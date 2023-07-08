@@ -2,12 +2,12 @@
 
 ## Link to the app
 
-I deployed the frontend on Netlify and the API on Azure so you can easily access it. I'll leave the link to the app bellow so you can play with it :)
-
+I deployed the frontend on Netlify and the API on Azure so you can easily access it. I'll leave the link to the app bellow so you can play with it :)<br>
+It may take some time to load as I used free tiers across the deployments.<br>
+I added a small angular app just for the purpose of the demo cause it's easier to interract with it this way.<br>
 This is the angular web app: https://codecrafterschallange.netlify.app<br>
 Link to the exposed endpoints (swagger): https://webapp-230707184837.azurewebsites.net/swagger/index.html
 
-It may take some time to load as I used free tiers across the deployments.
 
 ## Background Information
 I want to give you some background about my thought process and choices.
