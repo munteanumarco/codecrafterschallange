@@ -51,8 +51,8 @@ I also added a little angular app to be able to demo the use case of the project
 
 ## Testing
 
-Regarding the testing part, I added some unit tests for both the service and the controller.
-
+Regarding the testing part, I added some unit tests for both the service and the controller.<br>
+For this I used the NUnit unit testing framework and Moq for the mocking part.
 
 
     
