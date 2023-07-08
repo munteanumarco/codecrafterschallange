@@ -12,7 +12,7 @@ public class CustomOtpGenerator : IOtpGenerator
 
     public string GenerateOtp(byte[] sharedSecret, long timeStep)
     {
-        using var hmac = new HMACSHA1(sharedSecret);
+        using var hmac = new HMACSHA256(sharedSecret);
         var timeStepBytes = BitConverter.GetBytes(timeStep);
         if (BitConverter.IsLittleEndian)
         {
