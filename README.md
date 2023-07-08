@@ -1,5 +1,8 @@
 # OTP Generator
 
+## Quick Demo
+[![Quick Demo](https://img.youtube.com/vi/BfJjJYZ_BSU/0.jpg)](https://www.youtube.com/watch?v=BfJjJYZ_BSU)
+
 ## Link to the app
 
 I deployed the frontend on Netlify and the API on Azure so you can easily access it. I'll leave the link to the app bellow so you can play with it :)<br>
