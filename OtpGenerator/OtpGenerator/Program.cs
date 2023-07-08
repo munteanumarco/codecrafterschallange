@@ -1,5 +1,7 @@
 using OtpGenerator.Services;
-using OtpGenerator.Services.Interfaces;
+using OtpGenerator.Services.Otp;
+using OtpGenerator.Services.Otp.Dependencies;
+using OtpGenerator.Services.Otp.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,7 +16,9 @@ builder.Services.AddCors(options =>
     });
 });
 
-builder.Services.AddSingleton<IClock, SystemClock>();
+builder.Services.AddSingleton<ITimeProvider, TimeProvider>();
+builder.Services.AddScoped<IOtpGenerator, CustomOtpGenerator>();
+builder.Services.AddScoped<ISharedSecretProvider, SharedSecretProvider>();
 builder.Services.AddScoped<IOtpService, OtpService>();
 
 builder.Services.AddControllers();

@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using OtpGenerator.Models;
-using OtpGenerator.Services.Interfaces;
+using OtpGenerator.Services.Otp.Interfaces;
 
 namespace OtpGenerator.Controllers;
 
@@ -23,7 +23,7 @@ public class OtpController : ControllerBase
             return BadRequest("User ID cannot be null or empty.");
         }
         var otp = _otpService.GetOtp(userId);
-        return Ok(new {code = otp});
+        return Ok(new OtpReturnModel(otp));
     }
 
     [HttpPost]

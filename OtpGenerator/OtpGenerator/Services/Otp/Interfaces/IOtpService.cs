@@ -1,4 +1,4 @@
-namespace OtpGenerator.Services.Interfaces;
+namespace OtpGenerator.Services.Otp.Interfaces;
 
 public interface IOtpService
 {
