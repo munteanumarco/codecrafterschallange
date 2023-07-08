@@ -49,6 +49,10 @@ Next we use these two, the shared secret and the time step and generate the OTP 
 I also added a little angular app to be able to demo the use case of the project. I had in mind the Microsoft Authenticator app, when you open it you see there all the codes for your different apps with a timer going down for each OTP. So in the angular app on the Home page you can put the userId and then you ll start seeing codes for this user. Also added a validation page where you can check this codes in real time.
 
 
+## Testing
+
+Regarding the testing part, I added some unit tests for both the service and the controller.
+
 
 
     
