@@ -1,15 +1,11 @@
 using System.Security.Cryptography;
+using OtpGenerator.Constants;
 using OtpGenerator.Services.Otp.Interfaces;
 
 namespace OtpGenerator.Services.Otp.Dependencies;
 
 public class CustomOtpGenerator : IOtpGenerator
 {
-    private const int BinaryOtpLength = 4;
-    private const int SignificantBitsMask = 0x7FFFFFFF;
-    private const int PasswordLength = 6;
-    private const byte LastByteMask = 0x0F;
-
     public string GenerateOtp(byte[] sharedSecret, long timeStep)
     {
         using var hmac = new HMACSHA256(sharedSecret);
@@ -19,9 +15,9 @@ public class CustomOtpGenerator : IOtpGenerator
             Array.Reverse(timeStepBytes);
         }
         var hash = hmac.ComputeHash(timeStepBytes);
-        var offset = hash[hash.Length - 1] & LastByteMask;
-        var binaryOtp = new byte[BinaryOtpLength];
-        Array.Copy(hash, offset, binaryOtp, 0, BinaryOtpLength);
+        var offset = hash[hash.Length - 1] & OtpConstants.LastByteMask;
+        var binaryOtp = new byte[OtpConstants.BinaryOtpLength];
+        Array.Copy(hash, offset, binaryOtp, 0, OtpConstants.BinaryOtpLength);
 
         if (BitConverter.IsLittleEndian)
         {
@@ -29,8 +25,8 @@ public class CustomOtpGenerator : IOtpGenerator
         }
 
         var otp = BitConverter.ToInt32(binaryOtp, 0);
-        otp &= SignificantBitsMask;
-        otp = Math.Abs(otp) % (int)Math.Pow(10, PasswordLength);
-        return otp.ToString().PadLeft(PasswordLength, '0');;
+        otp &= OtpConstants.SignificantBitsMask;
+        otp = Math.Abs(otp) % (int)Math.Pow(10, OtpConstants.PasswordLength);
+        return otp.ToString().PadLeft(OtpConstants.PasswordLength, '0');;
     }
 }

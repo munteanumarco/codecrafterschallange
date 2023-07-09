@@ -1,11 +1,10 @@
+using OtpGenerator.Constants;
 using OtpGenerator.Services.Otp.Interfaces;
 
 namespace OtpGenerator.Services.Otp;
 
 public class OtpService : IOtpService
 {
-    private const int ValidityPeriodInSeconds = 30;
-    
     private readonly IOtpGenerator _otpGenerator;
     private readonly ISharedSecretProvider _sharedSecretProvider;
     private readonly ITimeProvider _timeProvider;
@@ -44,9 +43,9 @@ public class OtpService : IOtpService
 
     private static long GetTimeStep(DateTime dateTime)
     {
-        dateTime = dateTime.AddSeconds(-(dateTime.Second % ValidityPeriodInSeconds));
+        dateTime = dateTime.AddSeconds(-(dateTime.Second % OtpConstants.ValidityPeriodInSeconds));
         var unixTimestamp = (long)(dateTime.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
-        var timeStep = unixTimestamp / ValidityPeriodInSeconds;
+        var timeStep = unixTimestamp / OtpConstants.ValidityPeriodInSeconds;
         
         return timeStep;
     }
